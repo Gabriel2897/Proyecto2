@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/439b88bfda.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <title>Proyecto Home</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./"><img
+            src="./imagenes/logotipo-pasteleria-conjunto-herramientas-hacer-pasteles-galletas-pasteles_528132-218-removebg-preview.png"
+            alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <div class="flex-grow-1">
+            <div class="d-flex justify-content-between">
+              <H1 class=" flex-grow-1">La Pâtisserie Sucrée</H1>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <button style="margin: 10px" type="button" class="btn btn-light" data-bs-toggle="offcanvas"
+                    data-bs-target="#cuenta" aria-controls="offcanvasExample"><i
+                      class="fa-regular fa-user fa-flip fa-2xl" style="color: #7A9D54;"></i>
+                  </button>
+                </li>
+                <li class="nav-item" style="width: 80px;height: 60px;">
+                  <button style="margin: 10px; position: fixed;z-index: 1000;" type="button"
+                    class="btn btn-light transparent-bg" data-bs-toggle="offcanvas" data-bs-target="#carrito"
+                    aria-controls="offcanvasExample"><i class="fa-solid fa-cart-shopping fa-bounce fa-2xl"
+                      style="color: #7A9D54;"></i></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <br>
+            <div class="d-flex justify-content-between">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="column-gap: 50px;">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./catalogo">Catalogo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./promo">Promociones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./tienda">tienda provisional</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search" id="buscador">
+                <input class="form-control me-2" type="search" name="termino" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <article>
+      <div class="container-fluid">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="cuenta" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">INGRESAR</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <form action="" id="login-form">
+                <label for="usuario">USUARIO:</label>
+                <input type="text" id="usuario" name="usuario">
+                <label for="password">PASSWORD:</label>
+                <input type="password" id="password" name="password"><br>
+                <input type="submit" value="Login" class="carrito-button">
+                <button type="button" class="carrito-button" data-bs-toggle="modal" data-bs-target="#registerModal">
+                  Crear usuario
+                </button>
+              </form>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="carrito" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Carrito de compras</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            </ul>
+            <ul id="carrito-container"></ul>
+            <div id="totalCarrito"></div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="registerModalLabel">Registro de Usuario</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="registro">
+                <label for="registro-usuario">Usuario:</label>
+                <input type="text" id="registro-usuario" name="registro-usuario">
+                <label for="registro-email">Email:</label>
+                <input type="email" id="registro-email" name="registro-email">
+                <label for="registro-password">Contraseña:</label>
+                <input type="password" id="registro-password" name="registro-password">
+                <input type="submit" value="Crear cuenta" class="carrito-button">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      </button>
+    </article>
+  </header>
+  <main id="catalogo">
+    <h2>Catalogo</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="catalogo-container">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Opciones del Catálogo
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Opción 1</a></li>
+          <li><a class="dropdown-item" href="#">Opción 2</a></li>
+          <li><a class="dropdown-item" href="#">Opción 3</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <div id="banner-titulo">
+    <br><br><br><br><br>
+  </div>
+  <footer class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-lg-3">
+        <a href="./"><img id="logo2"
+            src="https://img.freepik.com/vector-premium/logotipo-pasteleria-cupcake-bayas_528132-243.jpg?w=740"
+            alt="logo"></a>
+      </div>
+      <div class="col-xs-12 col-md-6 col-lg-3 p-3">
+        <p class="h5">Servicios y Productos</p>
+        <div class="mb-2">
+          <a href="./" class="info-footer">
+            <p>Inicio</p>
+          </a>
+          <a href="" class="info-footer">
+            <p>Catering</p>
+          </a>
+          <a href="./terms" class="info-footer">
+            <p>Políticas de envío, compra, medios de pago, devoluciones y reembolsos</p>
+          </a>
+          <p></p>
+
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-6 col-lg-3 p-3">
+        <p class="h5">Contacto</p>
+        <div class="mb-2">
+          <p><i class="fa-solid fa-phone fa-sm"></i> Telf. 0800-333-6548</p>
+          <p><i class="fa-solid fa-envelope fa-sm"></i> pâtisseriesucrée@gmail.com</p>
+          <p><i class="fa-solid fa-location-dot fa-sm"></i> Av. Dulce 222, Pan Duro
+            Buenos Aires, Argentina
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-6 col-lg-3 p-3">
+        <p class="h5">SIGUENOS</p>
+        <div class="mb-2">
+          <p><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-2xl red-social"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2xl red-social"></i></a>
+            <a href="https://www.tiktok.com/es/"><i class="fa-brands fa-tiktok fa-2xl red-social"></i></a>
+            <i class="fa-regular fa-circle-up fa-2xl red-social" onclick="window.scrollTo(0, 0)"></i>
+          </p>
+          <p><a href="https://twitter.com/"><i class="fa-brands fa-twitter fa-2xl red-social"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-2xl red-social"></i></a>
+            <a href="https://ar.pinterest.com/"><i class="fa-brands fa-pinterest fa-2xl red-social"></i></a>
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-12 pt-3">
+        <p class="linea text-center"><small>&copy; 2023 <b>La Pâtisserie Sucrée</b> - Todos los Derechos
+            Reservados.</small></p>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/index.js"></script>
+  <script src="./js/carrito.js"></script>
+  <script src="./js/catalogo.js"></script>
+  <script src="./js/login.js"></script>
+  <script src="./js/usuarios.js"></script>
+</body>
+
+</html>

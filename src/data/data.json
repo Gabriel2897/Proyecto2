@@ -1,0 +1,135 @@
+[
+    {
+        "id": 1,
+        "url_img": "https://acdn.mitiendanube.com/stores/536/593/products/img_32121-eff998d366818fc5c116639880114353-480-0.webp",
+        "name": "TARTA DE FRUTILLA",
+        "price": 2600,
+        "description": "Base de masa sablee, dulce de leche, crema y frutillas."
+    },
+    {
+        "id": 2,
+        "url_img": "https://acdn.mitiendanube.com/stores/536/593/products/marcada551-1271612fda91ea19fc15603877988699-480-0.webp",
+        "name": "BROWNIE FRUTOS ROJOS",
+        "price": 14200,
+        "description": "Brownie de chocolate con dulce de leche, crema y mix de frutos rojos."
+    },
+    {
+        "id": 3,
+        "url_img": "https://acdn.mitiendanube.com/stores/536/593/products/marcada611-6ea73d64cc70056c8515603869408916-480-0.webp",
+        "name": "CHOCOOREO",
+        "price": 13000,
+        "description": "Base muy delgada de brownie con relleno de chocotorta y galletitas oreo/chocolinas a eleccion."
+    },
+    {
+        "id": 4,
+        "url_img": "https://acdn.mitiendanube.com/stores/536/593/products/image1131-f398932e2fb627639015700726713393-480-0.webp",
+        "name": "CARROT CAKE",
+        "price": 5100,
+        "description": "Carrot Cake especiado con Cream Cheese. Decorado con nueces y naranjas confitadas. "
+    },
+    {
+        "id": 5,
+        "url_img": "https://acdn.mitiendanube.com/stores/536/593/products/marcada121-95d3cf3397dc94f38e15619384772932-480-0.webp",
+        "name": "BUDIN ENTERO",
+        "price": 2600,
+        "description": "Tres sabores: frutos rojos, manzana con crumble o dulce de leche y chips. "
+    },
+    {
+        "id": 6,
+        "url_img": "https://acdn.mitiendanube.com/stores/536/593/products/marcada841-546fda88ca776379ef16298222290833-480-0.webp",
+        "name": "CAJA CHOCOBOM",
+        "price": 7700,
+        "description": "Se entrega con Caja con visor y postal."
+    },
+    {
+        "id": 7,
+        "url_img": "https://acdn.mitiendanube.com/stores/536/593/products/marcada491-559e34d08a776a2b5516189724212048-480-0.webp",
+        "name": "ALFAJOR DE NUEZ BAÑADO EN CHOCOLATE",
+        "price": "1200",
+        "description": "Alfajor de masa sable con nuez, dulce de leche y chocolate blanco."
+    },
+    {
+        "id": 8,
+        "url_img": "https://acdn.mitiendanube.com/stores/536/593/products/_k1a42971-805229ec30dccb47ad16756192133021-480-0.webp",
+        "name": "BOX VALENCIA PARA REGALAR",
+        "price": "14200",
+        "description": "Se enterga en caja con visor y postal. "
+    },
+    {
+        "id": 9,
+        "url_img": "https://acdn.mitiendanube.com/stores/536/593/products/_k1a42701-4964d93684f0f37b4716756191202607-480-0.webp",
+        "name": "BOX 30 MINI ALFAJORES BAÑADOS",
+        "price": "8300",
+        "description": "30 mini alfajores de sablée relleno con dulce de leche y sablée de chocolate relleno con dulce de leche."
+    },
+    {
+        "id": 10,
+        "url_img": "https://acdn.mitiendanube.com/stores/536/593/products/_k1a41161-fe6d3d0206b08cd9ff16756187769083-480-0.webp",
+        "name": "GANACHE",
+        "price": 9800,
+        "description": "Tarta de masa sable rellena de dulce de leche y cubierta de Ganache. Decorada con dulce de leche y polvo dorado"
+    },
+    {
+        "id": 11,
+        "url_img": "https://acdn.mitiendanube.com/stores/536/593/products/marcada191-5b37c97c8489d6c97115603864836025-480-0.webp",
+        "name": "LEMON PIE",
+        "price": 6700,
+        "description": "Tarta de masa sable rellena de Lemon Curd con picos de merengue italiano.Rinde:  8 porciones (20 cm)"
+    },
+    {
+        "id": 12,
+        "url_img": "https://acdn.mitiendanube.com/stores/536/593/products/image1101-9d42d2823c0d2bb5c315700728303325-480-0.webp",
+        "name": "TARTA DE FRUTILLAS CON BASE DE CHOCOLATE",
+        "price": "10500",
+        "description": "Tarta sablée de chocolate con crema y frutillas."
+    },
+    {
+        "id": 13,
+        "url_img": "https://acdn.mitiendanube.com/stores/536/593/products/marcada1101-c5a22c6a25ff44f1e716208573505073-480-0.webp",
+        "name": "TORTA JUANA",
+        "price": "15900",
+        "description": "Base de vainilla con frutos rojos, corona de copos de dulce de leche, crema y frutos rojos."
+    },
+    {
+        "id": 14,
+        "url_img": "https://acdn.mitiendanube.com/stores/536/593/products/marcada361-18f62a2dac86502d2e16208576077888-480-0.webp",
+        "name": "TORTA NUMERO, FORMA O LETRA DE BROWNIE.",
+        "price": "19400",
+        "description": "Torta numero, forma o letra con base de brownie. Decoracion con macarrons, oreo bañados y chocolates."
+    },
+    {
+        "id": 15,
+        "url_img": "https://acdn.mitiendanube.com/stores/536/593/products/_k1a40981-e581a12397a2bcd98f16756186066354-480-0.webp",
+        "name": "ROGEL",
+        "price": "15100",
+        "description": "Rinde: 15 porciones. Peso: 2,5 kg aprox (20 cm). "
+    },
+        {
+        "id": 16,
+        "url_img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/536/593/products/marcada111-052809763b34d7a43c16546139792656-480-0.jpg",
+        "name": "BROWNIE CLASICO",
+        "price": 4700,
+        "description": "Brownie con dulce de leche y merengue Italiano. Rinde: 10 a 12 porciones. (tamaño 20cm)"
+    },
+    {
+        "id": 17,
+        "url_img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/536/593/products/marcada311-ad54cfe656337b58f116208570312671-480-0.jpg",
+        "name": "Torta corazon, letra o número",
+        "price": 8200,
+        "description": "Decorada con macarons, ferreros, marroc y moneditas. Se entrega en base de madera, caja con visor y postal."
+    },
+    {
+        "id": 18,
+        "url_img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/536/593/products/marcada4011-34cc7142d4f74dba5815603892806969-480-0.jpg",
+        "name": "BROWNIE OREO",
+        "price": 6600,
+        "description": "Brownie con galletitas oreo en su interior, dulce de leche y crema oreo. Decorado con oreo y salsa de chocolate. Rinde de 10 a 12 porciones (20 cm)"
+    },
+    {
+        "id": 19,
+        "url_img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/536/593/products/marcada91-71699d5bbe67610fb015603868461743-480-0.jpg",
+        "name": "MARQUISE",
+        "price": 5100,
+        "description": "Brownie con dulce de leche, crema y merengue italiano. Rinde: 10 a 12 porciones (20 cm)"
+    }
+]

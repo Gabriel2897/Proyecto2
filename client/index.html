@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/439b88bfda.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <title>Proyecto Home</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./"><img
+            src="./imagenes/logotipo-pasteleria-conjunto-herramientas-hacer-pasteles-galletas-pasteles_528132-218-removebg-preview.png"
+            alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <div class="flex-grow-1">
+            <div class="d-flex justify-content-between">
+              <H1 class=" flex-grow-1">La Pâtisserie Sucrée</H1>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <button style="margin: 10px" type="button" class="btn btn-light" data-bs-toggle="offcanvas"
+                    data-bs-target="#cuenta" aria-controls="offcanvasExample"><i
+                      class="fa-regular fa-user fa-flip fa-2xl" style="color: #7A9D54;"></i>
+                  </button>
+                </li>
+                <li class="nav-item" style="width: 80px;height: 60px;">
+                  <button style="margin: 10px; position: fixed;z-index: 1000;" type="button"
+                    class="btn btn-light transparent-bg" data-bs-toggle="offcanvas" data-bs-target="#carrito"
+                    aria-controls="offcanvasExample"><i class="fa-solid fa-cart-shopping fa-bounce fa-2xl"
+                      style="color: #7A9D54;"></i></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <br>
+            <div class="d-flex justify-content-between">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="column-gap: 50px;">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./catalogo">Catalogo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./promo">Promociones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./tienda">tienda provisional</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search" id="buscador">
+                <input class="form-control me-2" type="search" name="termino" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <article>
+      <div class="container-fluid">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="cuenta" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">INGRESAR</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <form action="" id="login-form">
+                <label for="usuario">USUARIO:</label>
+                <input type="text" id="usuario" name="usuario">
+                <label for="password">PASSWORD:</label>
+                <input type="password" id="password" name="password"><br>
+                <input type="submit" value="Login" class="carrito-button">
+                <button type="button" class="carrito-button" data-bs-toggle="modal" data-bs-target="#registerModal">
+                  Crear usuario
+                </button>
+              </form>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="carrito" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Carrito de compras</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            </ul>
+            <ul id="carrito-container"></ul>
+            <div id="totalCarrito"></div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="registerModalLabel">Registro de Usuario</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="registro">
+                <label for="registro-usuario">Usuario:</label>
+                <input type="text" id="registro-usuario" name="registro-usuario">
+                <label for="registro-email">Email:</label>
+                <input type="email" id="registro-email" name="registro-email">
+                <label for="registro-password">Contraseña:</label>
+                <input type="password" id="registro-password" name="registro-password">
+                <input type="submit" value="Crear cuenta" class="carrito-button">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      </button>
+    </article>
+  </header>
+  <div id="carouselExampleFade" class="carousel slide carousel-fade " data-bs-ride="true">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://cdn7.kiwilimon.com/ss_secreto/3289/960x640/3289.jpg.jpg" class="d-block w-100" alt="Foto1">
+      </div>
+      <div class="carousel-item">
+        <img src="https://assets.elgourmet.com/wp-content/uploads/2023/03/red-v_TdjgZYvL1S9D3Rt6w7XhHVx8O2JNno.png"
+          class="d-block w-100" alt="Foto2">
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://assets.elgourmet.com/wp-content/uploads/2023/03/selva_sczRm83H9gSwavPODBQnFKyUh1buLp-1024x683.png.webp"
+          class="d-block w-100" alt="Foto3">
+      </div>
+      <div class="carousel-item">
+        <img src="https://i.ytimg.com/vi/zSbSwIoWupE/maxresdefault.jpg" class="d-block w-100" alt="Foto4">
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://content-cocina.lecturas.com/medio/2021/05/17/paso_a_paso_para_realizar_mona_de_pascua_de_fresa_con_coco_y_merengues_resultado_final_da1c7a67_1200x1200.jpg"
+          class="d-block w-100" alt="Foto5">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div id="banner-titulo">
+    <br><br><br><br><br>
+  </div>
+  <main>
+    <h2>Quienes somos</h2>
+    <p class="texto-central">Somos una tienda Online, de pastelería artesanal donde nuestros postres estan hechos de
+      manera tradicional y
+      artesanal, como si lo hicieramos en casa, para nuestras familias,
+      nuesta mision es ofrecer al consumidor postres de la máxima calidad, con la máxima frescura y a precios justos.
+      Para conseguirlo con rentabilidad, trabajamos en la innovación en producto y la búsqueda de la eficiencia
+      operativa, para así poder generar valor a
+      los “Jefes”, los empleados, proveedores, la sociedad y los accionistas.
+      Mimamos cada detalle en la elaboración de nuestros postres y tortas personalizadas tratando de que nuestros
+      clientes salgan contentos con sus pedidos y que sea lo que ellos estan buscando, ser el referente a nivel
+      nacional en postres lácteos, cuyo reconocimiento provenga tanto de consumidores, proveedores y la sociedad y
+      velando por una cadena alimentaria sostenible.
+    </p>
+    <h2>Destacados</h2>
+    <br>
+    <div class="row row-cols-1 row-cols-md-2 g-4" style="margin-left: 150px;" id="products-container">
+    </div>
+  </main>
+  <div class="container-fluid">
+    <div class="row banner">
+      <div class="col text-center"><i class="fa-solid fa-truck-fast fa-flip fa-2xl banner-icono"></i>Envíos a CABA
+        y GBA</div>
+      <div class="col text-center"><i class="fa-regular fa-credit-card fa-fade fa-2xl banner-icono"></i>Paga como quieras</div>
+      <div class="col text-center"><i class="fa-solid fa-lock fa-shake fa-2xl banner-icono"></i>Compra con
+        seguridad</div>
+    </div>
+  </div>
+
+  <div id="banner-titulo">
+    <br><br><br><br><br>
+  </div>
+  <footer class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-lg-3">
+        <a href="./"><img id="logo2"
+            src="https://img.freepik.com/vector-premium/logotipo-pasteleria-cupcake-bayas_528132-243.jpg?w=740"
+            alt="logo"></a>
+      </div>
+      <div class="col-xs-12 col-md-6 col-lg-3 p-3">
+        <p class="h5">Servicios y Productos</p>
+        <div class="mb-2">
+          <a href="./" class="info-footer">
+            <p>Inicio</p>
+          </a>
+          <a href="" class="info-footer">
+            <p>Catering</p>
+          </a>
+          <a href="./terms" class="info-footer">
+            <p>Políticas de envío, compra, medios de pago, devoluciones y reembolsos</p>
+          </a>
+          <p></p>
+
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-6 col-lg-3 p-3">
+        <p class="h5">Contacto</p>
+        <div class="mb-2">
+          <p><i class="fa-solid fa-phone fa-sm"></i> Telf. 0800-333-6548</p>
+          <p><i class="fa-solid fa-envelope fa-sm"></i> pâtisseriesucrée@gmail.com</p>
+          <p><i class="fa-solid fa-location-dot fa-sm"></i> Av. Dulce 222, Pan Duro
+            Buenos Aires, Argentina
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-6 col-lg-3 p-3">
+        <p class="h5">SIGUENOS</p>
+        <div class="mb-2">
+          <p><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-2xl red-social"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2xl red-social"></i></a>
+            <a href="https://www.tiktok.com/es/"><i class="fa-brands fa-tiktok fa-2xl red-social"></i></a>
+            <i class="fa-regular fa-circle-up fa-2xl red-social" onclick="window.scrollTo(0, 0)"></i>
+          </p>
+          <p><a href="https://twitter.com/"><i class="fa-brands fa-twitter fa-2xl red-social"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-2xl red-social"></i></a>
+            <a href="https://ar.pinterest.com/"><i class="fa-brands fa-pinterest fa-2xl red-social"></i></a>
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-12 pt-3">
+        <p class="linea text-center"><small>&copy; 2023 <b>La Pâtisserie Sucrée</b> - Todos los Derechos
+            Reservados.</small></p>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/index.js"></script>
+  <script src="./js/carrito.js"></script>
+  <script src="./js/productos.js"></script>
+  <script src="./js/login.js"></script>
+  <script src="./js/usuarios.js"></script>
+</body>
+
+</html>
